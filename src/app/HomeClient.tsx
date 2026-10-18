@@ -770,26 +770,49 @@ export default function HomeClient() {
                   </div>
                 </div>
 
-                <div style={{ padding: '2.25rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                  <span style={{ fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--accent-gold)', display: 'block', marginBottom: '0.4rem', fontWeight: 600 }}>
+                <div style={{ padding: '1.85rem 1.65rem 1.65rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <span style={{ fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--accent-gold)', display: 'block', marginBottom: '0.45rem', fontWeight: 600 }}>
                     {vayana.location} · Monograph #{vayana.projectNo}
                   </span>
-                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', marginBottom: '0.85rem', color: '#ffffff' }}>
+                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.55rem', marginBottom: '0.85rem', color: '#ffffff', lineHeight: 1.25 }}>
                     {vayana.title}
                   </h3>
-                  <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: '1.75', marginBottom: '1.75rem', flexGrow: 1, fontWeight: 300 }}>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.75', marginBottom: '1.5rem', flexGrow: 1, fontWeight: 300 }}>
                     Sculptural cantilevered balconies, custom terracotta jaali climate screens, and reflective stepping-stone water lawns establishing complete indoor-outdoor harmony.
                   </p>
 
-                  <div style={{ borderTop: '1px solid rgba(214, 189, 150, 0.14)', paddingTop: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div style={{ display: 'flex', gap: '0.4rem' }}>
-                      <span className="tactile-chip" style={{ fontSize: '0.68rem', cursor: 'default' }}>Terracotta Jaali</span>
-                      <span className="tactile-chip" style={{ fontSize: '0.68rem', cursor: 'default' }}>2.4m Cantilever</span>
-                    </div>
-                    <Link href="/projects/vayana-residence" style={{ fontSize: '0.75rem', color: 'var(--accent-gold-light)', letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600 }}>
-                      Inspect Study →
-                    </Link>
+                  {/* Architectural Specs Row */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem', marginBottom: '1.35rem', paddingTop: '1.15rem', borderTop: '1px solid rgba(214, 189, 150, 0.14)' }}>
+                    <span className="architectural-spec-tag">
+                      <span style={{ color: 'var(--accent-gold)', fontSize: '0.65rem' }}>◆</span>
+                      Terracotta Jaali
+                    </span>
+                    <span className="architectural-spec-tag">
+                      <span style={{ color: 'var(--accent-gold)', fontSize: '0.65rem' }}>◆</span>
+                      2.4m Cantilever
+                    </span>
+                    <span className="architectural-spec-tag">
+                      <span style={{ color: 'var(--accent-gold)', fontSize: '0.65rem' }}>◆</span>
+                      Passive Cooling
+                    </span>
                   </div>
+
+                  {/* Redesigned Luxury Inspect Study CTA */}
+                  <Link
+                    href="/projects/vayana-residence"
+                    className="btn-inspect-study"
+                    id="inspect-study-vayana"
+                  >
+                    <span className="btn-inspect-content">
+                      <span className="btn-inspect-glyph">◈</span>
+                      <span>Inspect Architectural Study</span>
+                    </span>
+                    <span className="btn-inspect-arrow-wrap">
+                      <svg className="btn-inspect-arrow-icon" width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                  </Link>
                 </div>
               </TiltCard>
             </div>
@@ -825,26 +848,49 @@ export default function HomeClient() {
                   </div>
                 </div>
 
-                <div style={{ padding: '2.25rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                  <span style={{ fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--accent-gold)', display: 'block', marginBottom: '0.4rem', fontWeight: 600 }}>
+                <div style={{ padding: '1.85rem 1.65rem 1.65rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <span style={{ fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--accent-gold)', display: 'block', marginBottom: '0.45rem', fontWeight: 600 }}>
                     {aurelia.location} · Monograph #{aurelia.projectNo}
                   </span>
-                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', marginBottom: '0.85rem', color: '#ffffff' }}>
+                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.55rem', marginBottom: '0.85rem', color: '#ffffff', lineHeight: 1.25 }}>
                     {aurelia.title}
                   </h3>
-                  <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: '1.75', marginBottom: '1.75rem', flexGrow: 1, fontWeight: 300 }}>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.75', marginBottom: '1.5rem', flexGrow: 1, fontWeight: 300 }}>
                     A neoclassical celebration destination featuring symmetrical fluted colonnades, grand pediments, and terracotta jaali apertures for ambient light filtration.
                   </p>
 
-                  <div style={{ borderTop: '1px solid rgba(214, 189, 150, 0.14)', paddingTop: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div style={{ display: 'flex', gap: '0.4rem' }}>
-                      <span className="tactile-chip" style={{ fontSize: '0.68rem', cursor: 'default' }}>Neoclassical</span>
-                      <span className="tactile-chip" style={{ fontSize: '0.68rem', cursor: 'default' }}>Fluted Columns</span>
-                    </div>
-                    <Link href="/projects/the-aurelia" style={{ fontSize: '0.75rem', color: 'var(--accent-gold-light)', letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600 }}>
-                      Inspect Study →
-                    </Link>
+                  {/* Architectural Specs Row */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem', marginBottom: '1.35rem', paddingTop: '1.15rem', borderTop: '1px solid rgba(214, 189, 150, 0.14)' }}>
+                    <span className="architectural-spec-tag">
+                      <span style={{ color: 'var(--accent-gold)', fontSize: '0.65rem' }}>◆</span>
+                      Neoclassical Order
+                    </span>
+                    <span className="architectural-spec-tag">
+                      <span style={{ color: 'var(--accent-gold)', fontSize: '0.65rem' }}>◆</span>
+                      Fluted Colonnade
+                    </span>
+                    <span className="architectural-spec-tag">
+                      <span style={{ color: 'var(--accent-gold)', fontSize: '0.65rem' }}>◆</span>
+                      Grand Banquet
+                    </span>
                   </div>
+
+                  {/* Redesigned Luxury Inspect Study CTA */}
+                  <Link
+                    href="/projects/the-aurelia"
+                    className="btn-inspect-study"
+                    id="inspect-study-aurelia"
+                  >
+                    <span className="btn-inspect-content">
+                      <span className="btn-inspect-glyph">◈</span>
+                      <span>Inspect Architectural Study</span>
+                    </span>
+                    <span className="btn-inspect-arrow-wrap">
+                      <svg className="btn-inspect-arrow-icon" width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                  </Link>
                 </div>
               </TiltCard>
             </div>
@@ -880,26 +926,49 @@ export default function HomeClient() {
                   </div>
                 </div>
 
-                <div style={{ padding: '2.25rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                  <span style={{ fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--accent-gold)', display: 'block', marginBottom: '0.4rem', fontWeight: 600 }}>
+                <div style={{ padding: '1.85rem 1.65rem 1.65rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <span style={{ fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--accent-gold)', display: 'block', marginBottom: '0.45rem', fontWeight: 600 }}>
                     {aarohan.location} · Monograph #{aarohan.projectNo}
                   </span>
-                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.6rem', marginBottom: '0.85rem', color: '#ffffff' }}>
+                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.55rem', marginBottom: '0.85rem', color: '#ffffff', lineHeight: 1.25 }}>
                     {aarohan.title}
                   </h3>
-                  <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: '1.75', marginBottom: '1.75rem', flexGrow: 1, fontWeight: 300 }}>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.75', marginBottom: '1.5rem', flexGrow: 1, fontWeight: 300 }}>
                     Vertical four-storey residence orchestrating private family suites, commercial design studios, and double-height landscaped verandahs behind climate louvers.
                   </p>
 
-                  <div style={{ borderTop: '1px solid rgba(214, 189, 150, 0.14)', paddingTop: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div style={{ display: 'flex', gap: '0.4rem' }}>
-                      <span className="tactile-chip" style={{ fontSize: '0.68rem', cursor: 'default' }}>4 Storeys</span>
-                      <span className="tactile-chip" style={{ fontSize: '0.68rem', cursor: 'default' }}>Cantilever</span>
-                    </div>
-                    <Link href={`/projects/${aarohan.slug}`} style={{ fontSize: '0.75rem', color: 'var(--accent-gold-light)', letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600 }}>
-                      Inspect Study →
-                    </Link>
+                  {/* Architectural Specs Row */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem', marginBottom: '1.35rem', paddingTop: '1.15rem', borderTop: '1px solid rgba(214, 189, 150, 0.14)' }}>
+                    <span className="architectural-spec-tag">
+                      <span style={{ color: 'var(--accent-gold)', fontSize: '0.65rem' }}>◆</span>
+                      4 Storeys Living
+                    </span>
+                    <span className="architectural-spec-tag">
+                      <span style={{ color: 'var(--accent-gold)', fontSize: '0.65rem' }}>◆</span>
+                      Cantilevered Terrace
+                    </span>
+                    <span className="architectural-spec-tag">
+                      <span style={{ color: 'var(--accent-gold)', fontSize: '0.65rem' }}>◆</span>
+                      Climate Louvers
+                    </span>
                   </div>
+
+                  {/* Redesigned Luxury Inspect Study CTA */}
+                  <Link
+                    href={`/projects/${aarohan.slug}`}
+                    className="btn-inspect-study"
+                    id={`inspect-study-${aarohan.slug}`}
+                  >
+                    <span className="btn-inspect-content">
+                      <span className="btn-inspect-glyph">◈</span>
+                      <span>Inspect Architectural Study</span>
+                    </span>
+                    <span className="btn-inspect-arrow-wrap">
+                      <svg className="btn-inspect-arrow-icon" width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                  </Link>
                 </div>
               </TiltCard>
             </div>
