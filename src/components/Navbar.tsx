@@ -85,6 +85,18 @@ export default function Navbar() {
     };
   }, []);
 
+  // Lock background body scroll when mobile menu is active
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { label: 'Projects', href: '/projects' },
     { label: 'About Atelier', href: '/about' },
@@ -102,7 +114,7 @@ export default function Navbar() {
           top: 0,
           left: 0,
           right: 0,
-          zIndex: 1000,
+          zIndex: mobileMenuOpen ? 1051 : 1000,
           transition: 'background 0.4s ease, background-color 0.4s ease, padding 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease, box-shadow 0.4s ease',
           backgroundColor: scrolled ? 'rgba(8, 9, 7, 0.95)' : 'transparent',
           background: scrolled
@@ -360,36 +372,22 @@ export default function Navbar() {
           right: 0,
           bottom: 0,
           backgroundColor: 'rgba(9, 10, 8, 0.98)',
-          backdropFilter: 'blur(25px)',
-          WebkitBackdropFilter: 'blur(25px)',
-          zIndex: 999,
+          backdropFilter: 'blur(30px)',
+          WebkitBackdropFilter: 'blur(30px)',
+          zIndex: 1050,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          gap: '2.2rem',
-          transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+          gap: '2rem',
+          transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
           opacity: mobileMenuOpen ? 1 : 0,
           pointerEvents: mobileMenuOpen ? 'auto' : 'none',
-          transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-20px)',
-          padding: '2rem',
+          transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-16px)',
+          padding: '5.5rem 2rem 2.5rem',
+          overflowY: 'auto',
         }}
       >
-        <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-          <img
-            src="/brand/homifiora-logo.png"
-            srcSet="/brand/homifiora-logo.png 1x, /brand/homifiora-logo@2x.png 2x"
-            alt="HOMIFIORA · Architecture | Interiors | Execution"
-            style={{
-              height: '48px',
-              width: 'auto',
-              maxWidth: '85vw',
-              display: 'inline-block',
-              objectFit: 'contain',
-              imageRendering: '-webkit-optimize-contrast',
-            }}
-          />
-        </div>
 
         {navLinks.map((link) => {
           const active = isActive(link.href);
