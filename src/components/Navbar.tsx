@@ -416,7 +416,7 @@ export default function Navbar() {
             className="btn-bespoke btn-bespoke-gold"
             style={{ width: '100%', padding: '0.85rem 1.5rem', fontSize: '0.75rem', textAlign: 'center' }}
           >
-            Initiate Commission
+            Book Consultation
           </Link>
           <a
             id="mobile-drawer-whatsapp"
